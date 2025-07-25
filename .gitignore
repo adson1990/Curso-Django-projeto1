@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+.env/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.mo
+*.db
+*.sqlite3
+*.pyproj
+
+# Test & coverage reports
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# VSCode settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# Migrations - opcional se você quiser ignorar
+# **/migrations/
+# !**/migrations/__init__.py
+
+# Local env variables
+.env
+.env.*
+
+# Windows-specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS-specific (caso use no futuro)
+.DS_Store
+
+# Pipenv
+Pipfile.lock
+
+# Others
+*.swp
