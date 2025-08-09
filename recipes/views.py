@@ -4,7 +4,9 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'global/pages/home.html', context={
+        'name':'Adson Farias'
+    })
 
 def about(request):
     return HttpResponse('Sobre a aplicação!')
