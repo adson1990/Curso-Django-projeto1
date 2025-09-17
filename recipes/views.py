@@ -13,3 +13,8 @@ def about(request):
 
 def contact(request):
     return HttpResponse('Página de contato!')
+
+def recipe(request, id):
+    return render(request, 'global/pages/recipe-view.html', context={
+        'name':'Testando novas urls'
+    })
