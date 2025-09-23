@@ -18,3 +18,9 @@ def recipe(request, id):
     return render(request, 'global/pages/recipe-view.html', context={
         'name':'Testando novas urls'
     })
+
+def recipe_detail(request, id):
+    # Futuramente buscar pelo ID no banco ex: Recipe.objects.get(pk=id)
+    return render(request, 'recipes/recipe-view.html', {
+        'id': id
+    })
