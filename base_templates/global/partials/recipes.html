@@ -1,40 +1,40 @@
-<div class="recipe-list-item">
-                <div class="recipe-cover recipe">
-                    <img src="https://placehold.co/600x400@2x.png"/>
-                </div>
-
-                <div class="recipe-author">
-                    <span class="recipe-author-item item-author">
-                        <i class="fas fa-user"></i>
-                        Adson Lucas
-                    </span>
-                    <span class="recipe-author-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        18/08/2025 às 16:53
-                    </span>
-                    <span class="recipe-author-item">
-                        <a href="recipes/category/cafe-da-manha/">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Café da manhã</span>
-                        </a>
-                    </span>
+<div class="recipe recipe-list-item">
+                <div class="recipe-cover">
+                    <img src= "{{ recipe.cover.url }}"/>
                 </div>
 
                 <div class="recipe-title-containe">
-                    <h2 class="recipe-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, repellat placeat dolore ipsam earum cumque totam voluptate culpa pariatur quae dolor omnis illo eveniet voluptatum, unde id rem error neque?</h2>
+                    <h2 class="recipe-title"> {{ recipe.title }} </h2>
+                </div>
+
+                <div class="recipe-author">
+                    <span class="recipe-author-item author">
+                        <i class="fas fa-user"></i>
+                        {{  recipe.author.first_name }} {{  recipe.author.last_name }}
+                    </span>
+                    <span class="recipe-author-item date">
+                        <i class="fas fa-calendar-alt"></i>
+                        {{ recipe.created_at|date:"d/m/Y" }} às {{ recipe.created_at|date:"H:i" }}
+                    </span>
+                    <span class="recipe-author-item category">
+                        <a href="recipes/category/cafe-da-manha/">
+                            <i class="fas fa-layer-group"></i>
+                            <span>{{ recipe.category.name }}</span>
+                        </a>
+                    </span>
                 </div>
 
                 <div class="recipe-meta-container">
                     <div class="recipe-meta recipe-preparation">
                         <h3 class="recipe-meta-title"><i class="fas fa-stopwatch"></i> Preparo</h3>
                         <div class="recipe-meta-text">
-                            0 minutos
+                            {{ recipe.preparation_time }} {{ recipe.preparation_time_unit }}
                         </div>
                     </div>
                     <div class="recipe-meta recipe-serving">
                         <h3 class="recipe-meta-title"><i class="fas fa-pizza-slice"></i> Porções</h3>
                         <div class="recipe-meta-text">
-                            0 porções
+                            {{ recipe.servings }} {{ recipe.servings_unit }}
                         </div>
                     </div>
                 </div>

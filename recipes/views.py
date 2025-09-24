@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from seed import make_recipe
 
 # Create your views here.
 
 def home(request):
     return render(request, 'global/pages/home.html', context={
-        'name':'Adson Farias'
+        'recipes': [make_recipe() for _ in range(7)]
     })
 
 def about(request):
@@ -16,5 +17,6 @@ def contact(request):
 
 def recipe(request, id):
     return render(request, 'global/pages/recipe-view.html', context={
-        'name':'Testando novas urls'
+        'recipe': make_recipe(),
+        "is_detail_page": True
     })

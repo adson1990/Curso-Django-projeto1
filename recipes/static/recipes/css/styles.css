@@ -163,6 +163,7 @@
 
         .recipe-list-item {
             max-width: 64rem;
+            height: fit-content;
         }
 
         .recipe-list-item:hover {
@@ -188,13 +189,28 @@
         }
 
         .recipe-author {
-            padding-top: 2rem;
-            display: flex;
-            gap: 5rem;
+           display: flex;
+           justify-content: space-between; /* separa os itens */
+           align-items: center;            /* alinha verticalmente */
+           padding: 1rem 3rem;
         }
-
         .item-author {
             margin-left: 5rem;
+        }
+
+        .recipe-author .author {
+            flex: 1;
+            text-align: left;   /* força ficar à esquerda */
+        }
+
+        .recipe-author .date {
+            flex: 1;
+            text-align: center; /* força centralizar */
+        }
+
+        .recipe-author .category {
+            flex: 1;
+            text-align: right;  /* força ficar à direita */
         }
 
         .recipe-title-containe {
@@ -263,4 +279,11 @@
 
         .main-footer a:hover {
             filter: brightness(.8);
+        }
+
+        .preparation-steps p {
+           margin-top: 4rem;
+           text-align: justify;  /* deixa o texto alinhado */
+           text-indent: 2em;
+           line-height: 1.6;  
         }
