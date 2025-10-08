@@ -15,6 +15,7 @@ def rand_ratio():
 
 def make_recipe():
     return {
+    'id' : fake.random_number(digits=2, fix_len=True),
     'title': fake.sentence(nb_words=6),
     'description': fake.text(max_nb_chars=150),
     'preparation_time': fake.random_int(min=1, max=120),
