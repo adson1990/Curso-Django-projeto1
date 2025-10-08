@@ -16,4 +16,5 @@ urlpatterns = [
     # uuid -> aceita um UUID válido
     # path -> aceita qualquer coisa não vazia, inclusive barras
     path('recipe/<int:id>/', views.recipe, name='recipe-detail'),
+    path('recipe/category/<int:category_id>/', views.category, name='category'),
 ]
