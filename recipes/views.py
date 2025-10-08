@@ -6,7 +6,7 @@ from seed import make_recipe
 
 def home(request):
     return render(request, 'global/pages/home.html', context={
-        'recipes': [make_recipe() for _ in range(7)]
+        'recipes': [make_recipe() for _ in range(9)]
     })
 
 def about(request):
